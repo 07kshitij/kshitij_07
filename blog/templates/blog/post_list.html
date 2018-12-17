@@ -1,18 +1,29 @@
+{% load static %}
+
 <html>
     <head>
         <title>kshitij_07</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
     </head>
     <body>
-        <div>
+        <div class = "page-header">
 			<center>
             	<h1><a href="/">My blog</a></h1>
 			</center>        
-		</div>
-	{% for post in posts %}
-		<div>
-			<h2><a href="">{{post.title}}</a></h2>
-			<p>{{post.text}}</p>
-		</div>
-	{% endfor %}
+	</div>
+	<div class = "content container">
+		<div class = "row">
+			<div class = "class-md-8">		
+				{% for post in posts %}
+				<div class = "post">
+					<h2><a href="">{{post.title}}</a></h2>
+					<p>{{post.text}}</p>
+				</div>
+				{% endfor %}
+			</div>
+		</div>	
+	</div>
     </body>
 </html>
