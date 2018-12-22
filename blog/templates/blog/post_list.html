@@ -4,10 +4,16 @@
 	{% for post in posts %}
 	<div class = "post">		
 		<h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2>
-		<p>Published: {{ post.published_date }}</p>
+		<p><b>Published</b>: {{ post.published_date }}</p>
 		<hr>
 		<p>{{post.text}}</p>
-		<a href="{% url 'post_detail' pk=post.pk %}">Comments: {{ post.comments.count }}</a>
+	<div class="vote_list">
+	  <div class="vertical-padding"></div>	
+	  <a class="btn btn-default" href="{% url 'upvote' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-up"></span></a>
+	  <a class="btn btn-default" href="{% url 'downvote' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-down"></span></a>	
+	<div class="vertical-padding"></div>	
+	</div> 
+		<b>Comments: {{ post.comments.count }}</b><span class="tab"><b>Likes: {{ post.upvotes }}</span></b>
 	</div>
 	{% endfor %}
 {% endblock content %}

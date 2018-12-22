@@ -1,5 +1,5 @@
 .page-header{
-	margin-top : 5px;
+	margin-top : 0px;
 	background-color : #C25100;
 	padding : 20px 20px 20px 40px;
 }
@@ -17,7 +17,17 @@
 .save {
     float: right;
 }
-
+.tab { 
+       display:inline-block; 
+       margin-left: 40px; 
+}
+.vertical-padding{
+    margin-top:12px;
+}
+.comment-head{
+   color: #000000;
+   font-size: 20pt;	
+}
 .post-form textarea, .post-form input {
     width: 100%;
 }
@@ -30,7 +40,7 @@
 }
 
 .post {
-    margin-bottom: 70px;
+    margin-bottom: 10px;
 }
 
 .post h1 a, .post h1 a:visited {
