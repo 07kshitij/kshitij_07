@@ -1,9 +1,8 @@
-## kshitij_07 
-***
-Thanks for stopping by. This repository contains the code of my **Currently under development** Blog, which as a usual convention (followed by me) is named after my handle at all the Competitive Coding Websites, **kshitij_07**.
+# kshitij_07 
+
+Thanks for stopping by. This repository contains the code of my **Currently under development** Blog, which, as a usual convention (followed by me) is named after my handle at all the Competitive Coding Websites, **kshitij_07**.
 
 > Feel free to suggest some better name :p
-***
 
 The Blog has been made on **Python's** Web-Development Framework **Django**, which I recently learned at [Django Girls Tutorial](https://tutorial.djangogirls.org/en/). This coupled with its extension tutorial and the fascination to learn more of decorartion (read HTML and CSS) led to the origin of the idea of the blog.
 
