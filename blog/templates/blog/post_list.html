@@ -1,8 +1,9 @@
 {% extends 'blog/base.html' %}
-
 {% block content %}	
+    <div class = "split left">
 	{% for post in posts %}
-	<div class = "post">		
+	<hr>
+	<div class = "post">	
 		<h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2>
 		<p><b>Published</b>: {{ post.published_date }}</p>
 		<hr>
@@ -16,4 +17,11 @@
 		<b>Comments: {{ post.comments.count }}</b><span class="tab"><b>Likes: {{ post.upvotes }}</span></b>
 	</div>
 	{% endfor %}
+     </div>
+     
+     <div class = "split right">
+	<div class = "vl">
+	<center><h2>About Me</h2></center>
+	</div>	
+     </div>
 {% endblock content %}

@@ -7,7 +7,7 @@
 			<a class="btn btn-deafult" href="{% url 'post_remove' pk=post.pk%}"><span class="glyphicon glyphicon-remove"></span></a>
 	 	{% endif %}
 		{% if post.published_date %}
-	            <div class="date">{{ post.published_date }}</div>
+		   <span><b>Published : </b><div class="date">{{ post.published_date }}</div></span>
 		{% else %}
 		    <a class = "btn btn-default" href="{% url 'post_publish' pk=post.pk %}">Publish</a>
         	{% endif %}        
