@@ -18,20 +18,14 @@
 		</center>        
 	</div>
 	
-	<div id = "Competitive-Programming" class = "tab-link">
-		<p>CP</p>
-	</div>
-
-	<div id = "Machine-Learning" class = "tab-link">
-		<p>Machine Learning</p>
-	</div>
-
-	<div id = "JEE" class = "tab-link">
-		<p>JEE</p>
-	</div>
-	<div id = "All" class = "tab-link">
-		<p>All Posts</p>
-	</div>
+	<div id = "Competitive-Programming" class = "tab-link"></div>
+	<div id = "Machine-Learning" class = "tab-link"></div>
+	<div id = "JEE" class = "tab-link"></div>
+	<div id = "All" class = "tab-link"></div>
+	<a class = "tab-link" href = "{% url 'cp' %}">CP</a>
+	<a class = "tab-link" href = "{% url 'ml' %}">Machine Learning</a>
+	<a class = "tab-link" href = "{% url 'jee' %}">JEE</a>
+	<a class = "tab-link" href = "{% url 'all' %}">All Posts</a>
 	<div class = "content container">
 		<div class = "row">
 			<div class = "class-md-8">		

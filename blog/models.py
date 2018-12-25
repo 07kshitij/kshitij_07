@@ -10,6 +10,7 @@ class Post(models.Model):
 	published_date = models.DateTimeField(blank = True, null = True)
 	upvotes = models.IntegerField(default=0)
 	downvoted = models.IntegerField(default=0)
+	tag = models.CharField(max_length=200,default='None')
 	def publish(self):
 		self.published_date = timezone.now()
 		self.save()

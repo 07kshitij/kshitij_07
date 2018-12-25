@@ -81,4 +81,16 @@ def downvote(request,pk):
 	vote.upvotes -= 1
 	vote.downvoted -=1
 	vote.save()
-	return redirect('post_detail',pk=pk)		
+	return redirect('post_detail',pk=pk)
+def cp(request):
+	posts = Post.objects.filter(tag='CP')
+	return render(request,'blog/menu.html',{'posts':posts})
+def ml(request):
+	posts = Post.objects.filter(tag='ML')
+	return render(request,'blog/menu.html',{'posts':posts})
+def jee(request):
+	posts = Post.objects.filter(tag='JEE')
+	return render(request,'blog/menu.html',{'posts':posts})
+def all(request):
+	posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')		
+	return render(request,'blog/menu.html',{'posts':posts})

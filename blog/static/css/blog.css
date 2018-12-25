@@ -1,6 +1,6 @@
 .page-header{
 	margin-top : 0px;
-	background-color : #ccffff;
+	background-color : #ccccff;
 	padding : 20px 20px 20px 40px;
 }
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
@@ -64,17 +64,15 @@
 }
 
 .tab-link{
-    font-size:30px;
+    font-size:22px;
     text-align: center;
     padding: 10px;
     color: black;
     float: left; 
     width: 25%;
-    margin-top: -21px;
+    margin-top: -30px;
     margin-bottom: 20px;
+
 }
 
-/*#Competitive-Programming {background-color: #ffccff;}
-#Machine-Learning {background-color: #ffccff;}
-#JEE {background-color: #ffccff;}*/
 
