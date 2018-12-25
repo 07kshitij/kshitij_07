@@ -4,7 +4,7 @@ Thanks for stopping by. This repository contains the code of my **Currently unde
 
 > Feel free to suggest some better name :p
 
-The Blog has been made on **Python's** Web-Development Framework **Django**, which I recently learned at [Django Girls Tutorial](https://tutorial.djangogirls.org/en/). This coupled with its extension tutorial and the fascination to learn more of decorartion (read HTML and CSS) led to the origin of the idea of the blog.
+The Blog has been made on **Python's** Web-Development Framework **Django**, which I recently learned at [Django Girls Tutorial](https://tutorial.djangogirls.org/en/). This, coupled with its extension tutorial and the fascination to learn more decoration (read HTML and CSS) led to the origin of the idea of this blog.
 
 The basic articles I intend to manage on the blog are :
 - Competitive Programming
