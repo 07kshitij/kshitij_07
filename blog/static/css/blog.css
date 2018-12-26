@@ -51,9 +51,11 @@
 }
 
 .right{
+	font-size: 15pt;
 	margin-top: 20px;	
 	width : 30%;
 	overflow: hidden;
+	padding : 5px 5px 5px 35px;
 }
 .vl{
 	height: 100%;
@@ -64,14 +66,15 @@
 }
 
 .tab-link{
-    font-size:22px;
+
+    font-size:25px;
     text-align: center;
     padding: 10px;
     color: black;
     float: left; 
     width: 25%;
-    margin-top: -30px;
-    margin-bottom: 20px;
+    margin-top: -20px;
+    margin-bottom: 0px;
 
 }
 
