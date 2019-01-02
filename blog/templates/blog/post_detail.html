@@ -17,7 +17,7 @@
 	  <a class="btn btn-default" href="{% url 'upvote' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-up"></span></a>
 	  <a class="btn btn-default" href="{% url 'downvote' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-down"></span></a>
 	  <hr>	
-	  <b>Likes : {{ post.upvotes }} <span class="tab"> Comments: {{ post.comments.count }}</span></b>		
+	  <b>Likes: {{ post.total }} ({{ post.upvotes }},{{post.downvotes }}) <span class="tab"> Comments: {{ post.comments.count }}</span></b>		
 	</div>    
     </div>
 	<hr>

@@ -17,5 +17,7 @@ urlpatterns = [
     re_path(r'^comment/(?P<pk>\d+)/approve/$', views.comment_approve, name='comment_approve'),
     re_path(r'^comment/(?P<pk>\d+)/remove/$', views.comment_remove, name='comment_remove'),
     re_path(r'^post/(?P<pk>\d+)/upvote/$', views.upvote, name='upvote'),
-    re_path(r'^post/(?P<pk>\d+)/downvote/$', views.downvote, name='downvote'),		
+    re_path(r'^post/(?P<pk>\d+)/downvote/$', views.downvote, name='downvote'),
+    re_path(r'^post/(?P<pk>\d+)/down/$', views.down, name='down'),
+    re_path(r'^post/(?P<pk>\d+)/up$', views.up, name='up'),		
 ]

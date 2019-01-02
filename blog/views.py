@@ -73,15 +73,32 @@ def comment_remove(request,pk):
 	return redirect('post_detail',pk=comment.post.pk)
 def upvote(request,pk):
 	vote = get_object_or_404(Post,pk=pk)
+	vote.up += 1
 	vote.upvotes += 1
+	vote.total += 1	
 	vote.save()
 	return redirect('post_detail',pk=pk)
 def downvote(request,pk):
 	vote = get_object_or_404(Post,pk=pk)
-	vote.upvotes -= 1
-	vote.downvoted -=1
+	vote.down -= 1
+	vote.downvotes -=1
+	vote.total -= 1	
 	vote.save()
 	return redirect('post_detail',pk=pk)
+def up(request,pk):
+	vote = get_object_or_404(Post,pk=pk)
+	vote.up += 1
+	vote.upvotes += 1
+	vote.total += 1
+	vote.save()
+	return redirect('post_list')
+def down(request,pk):
+	vote = get_object_or_404(Post,pk=pk)
+	vote.down -= 1
+	vote.downvotes -= 1
+	vote.total -= 1	
+	vote.save()
+	return redirect('post_list')
 def cp(request):
 	posts = Post.objects.filter(tag='CP')
 	return render(request,'blog/menu.html',{'posts':posts})

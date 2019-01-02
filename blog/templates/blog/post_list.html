@@ -9,11 +9,11 @@
 		<p>{{post.text | safe | linebreaksbr}}</p>
 	<div class="vote_list">
 	  <div class="vertical-padding"></div>	
-	  <a class="btn btn-default" href="{% url 'upvote' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-up"></span></a>
-	  <a class="btn btn-default" href="{% url 'downvote' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-down"></span></a>	
+	  <a class="btn btn-default" href="{% url 'up' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-up"></span></a>
+	  <a class="btn btn-default" href="{% url 'down' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-down"></span></a>	
 	<div class="vertical-padding"></div>	
 	</div> 
-		<b>Comments: {{ post.comments.count }}</b><span class="tab"><b>Likes: {{ post.upvotes }}</span></b>
+		<b>Comments: {{ post.comments.count }}</b><span class="tab"><b>Likes: {{ post.total }} ({{ post.upvotes }},{{post.downvotes }})</span></b>
 	</div>
 	{% endfor %}
      </div>
