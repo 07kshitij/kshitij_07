@@ -1,0 +1,38 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>kshitij_07</title>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+	<link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    </head>
+    <body>
+        <div class = "page-header">
+		{% if user.is_authenticated %}
+			<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+			<a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
+		{% endif %}
+		<center>
+            	<h1><a href="/">Kshitij's blog</a></h1>
+		</center>        
+	</div>
+	
+	<div id = "Competitive-Programming" class = "tab-link"></div>
+	<div id = "Machine-Learning" class = "tab-link"></div>
+	<div id = "JEE" class = "tab-link"></div>
+	<div id = "All" class = "tab-link"></div>
+	<b><a class = "tab-link" href = "{% url 'cp' %}">Competitive Coding</a></b>
+	<b><a class = "tab-link" href = "{% url 'ml' %}">Machine Learning</a></b>
+	<b><a class = "tab-link" href = "{% url 'jee' %}">JEE</a></b>
+	<b><a class = "tab-link" href = "{% url 'all' %}">All Posts</a></b>
+	<div class = "content container">
+		<div class = "row">
+			<div class = "class-md-8">		
+				{% block content %}
+          			{% endblock %}
+			</div>
+		</div>	
+	</div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+{% extends 'blog/base.html' %}
+{% block content %}	
+	{% for post in posts %}
+	<hr>
+	<div class = "post">	
+		<h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2>
+		<p><b>Published</b>: {{ post.published_date }}</p>
+		<hr>
+		<p>{{post.text | safe | linebreaksbr}}</p>
+	<div class="vote_list">
+	  <div class="vertical-padding"></div>	
+	  <a class="btn btn-default" href="{% url 'upvote' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-up"></span></a>
+	  <a class="btn btn-default" href="{% url 'downvote' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-down"></span></a>	
+	<div class="vertical-padding"></div>	
+	</div> 
+		<b>Comments: {{ post.comments.count }}</b><span class="tab"><b>Likes: {{ post.upvotes }}</span></b>
+	</div>
+	{% endfor %}
+{% endblock content %}
