@@ -13,7 +13,8 @@ The basic articles I intend to manage on the blog are :
 - ..... Yeah, only this much so far.........
 
 The proposed work that needs to do is :
-- [ ]  Make the UI better, it sucks at the moment.
-- [ ]  .....Umm... Yeah, let's do the first one first :p
+- [x]  Make the UI better, it sucks at the moment.
+- [ ]  Add links to 'contact me' (implement an intent from a from to my email)
+- [ ]  Add links to projects and other stuff, make UI even better
 
 Finally, the webpage is currently hosted [here](https://07kshitij.pythonanywhere.com/). You are welcome to check it out. In case you find any dissimilarity with the code here and the appearance of the webpage, or find the page empty, please don't go back, I would be probably experimenting something with it on the backend at that moment.

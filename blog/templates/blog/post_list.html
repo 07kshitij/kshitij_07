@@ -1,32 +1,36 @@
 {% extends 'blog/base.html' %}
 {% block content %}	
     <div class = "split left">
-	{% for post in posts %}
-	<hr>
-	<div class = "post">	
-		<h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2>
-		<p><b>Published</b>: {{ post.published_date }}</p>
-		<p>{{post.text | safe | linebreaksbr}}</p>
-	<div class="vote_list">
-	  <div class="vertical-padding"></div>	
-	  <a class="btn btn-default" href="{% url 'up' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-up"></span></a>
-	  <a class="btn btn-default" href="{% url 'down' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-down"></span></a>	
-	<div class="vertical-padding"></div>	
-	</div> 
-		<b>Comments: {{ post.comments.count }}</b><span class="tab"><b>Likes: {{ post.total }} ({{ post.upvotes }},{{post.downvotes }})</span></b>
-	</div>
-	{% endfor %}
-     </div>
+		{% for post in posts %}
+		<hr>
+		<div class = "post">	
+			<h2><a href="{% url 'post_detail' pk=post.pk %}">{{post.title}}</a></h2>
+			<p><b>Published</b>: {{ post.published_date }}</p>
+			<p>{{post.text | safe | linebreaksbr}}</p>
+		</div>
+		
+		<div class="vote_list">
+		  <div class="vertical-padding"></div>	
+		  <a class="btn btn-default" href="{% url 'up' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-up"></span></a>
+		  <a class="btn btn-default" href="{% url 'down' pk=post.pk %}"><span class = "glyphicon glyphicon-thumbs-down"></span></a>	
+		  <div class="vertical-padding"></div>	
+		  <div><b>Comments: {{ post.comments.count }}</b><span class="tab"><b>Likes: {{ post.total }} ({{ post.upvotes }},{{post.downvotes }})</span></b></div>
+		</div>
+		{% endfor %}
+    </div>
      
-     <div class = "split right">
-	<div class = "vl">
-	<center><h2><u>About Me</u></h2></center>
-	<center><p>Hi!, I'm Kshitij  Agrawal,a sophomore majoring in Electronics and Communication Engineering from IIT-Kharagpur</p>
-	<p>Apart from here, you can check me out at these places :</p>
-	{% load static %}<img src="{% static 'codechef.jpg' %}" width="100" height="35"/><a href = "https://www.codechef.com/users/kshitij_07"> kshitij_07</a>
-	<br> 
-	{% load static %}<img src="{% static 'codeforces.jpg' %}" width="100" height="25"/><a href = "https://codeforces.com/profile/kshitij_07"> kshitij_07</a>
-	</center>	
-	</div>	
-     </div>
+    <div class = "split right">
+		<div class = "centered">
+		<h2><u>About Me</u></h2>
+		<p>Hi!, I'm Kshitij  Agrawal,a sophomore majoring in Electronics and Communication Engineering from IIT-Kharagpur</p>
+		<p>Apart from here, you can check me out at these places</p>
+		{% load static %}<img src="{% static 'codechef.jpg' %}" width="100" height="35"/><a href = "https://www.codechef.com/users/kshitij_07"> kshitij_07</a>
+		<br> 
+		{% load static %}<img src="{% static 'codeforces.jpg' %}" width="100" height="25"/><a href = "https://codeforces.com/profile/kshitij_07"> kshitij_07</a>
+		</div>
+	<br>
+    </div>
+    <div class = "footer">
+    	<h >Made with Django</h>
+    </div>
 {% endblock content %}
