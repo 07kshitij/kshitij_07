@@ -12,7 +12,7 @@ The basic articles I intend to manage on the blog are :
 - Some of my Quora answers on JEE Preparation
 - ..... Yeah, only this much so far.........
 
-The proposed work that needs to do is :
+The proposed work that needs to be done is :
 - [x]  Make the UI better, it sucks at the moment.
 - [ ]  Add links to 'contact me' (implement an intent from a from to my email)
 - [ ]  Add links to projects and other stuff, make UI even better
